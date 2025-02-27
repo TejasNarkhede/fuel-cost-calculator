@@ -1,24 +1,18 @@
-package com.cargasm.fuelcostcalc.controller;
-
+package com.cargasm.fuelcostcalc;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.cargasm.fuelcostcalc.FuelCalculation;
-import com.cargasm.fuelcostcalc.FuelCalculationRepository;
-import com.cargasm.fuelcostcalc.model.FuelRequest;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+@CrossOrigin(origins = "http://localhost:5173")  // Allow frontend requests
 @RestController
 @RequestMapping("/fuel")
 public class FuelCalculatorController {
