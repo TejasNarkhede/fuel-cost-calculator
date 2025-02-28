@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FuelCostForm from "./components/FuelCostForm";
 import FuelCostResult from "./components/FuelCostResult";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [cost, setCost] = useState(null);
@@ -20,7 +21,7 @@ function App() {
       }
 
       const data = await response.json();
-      console.log("API Response:", data);
+      // console.log("API Response:", data);
 
       if (data && data.fuelCost !== undefined) {
         setCost(data.fuelCost);
@@ -34,8 +35,8 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>Fuel Cost Calculator</h1>
+    <div className="container text-center mt-5">
+      <h1 className="mb-4">Fuel Cost Calculator</h1>
       <FuelCostForm onCalculate={handleCalculate} />
       <FuelCostResult cost={cost} />
     </div>
