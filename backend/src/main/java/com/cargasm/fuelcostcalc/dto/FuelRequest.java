@@ -1,4 +1,4 @@
-package com.cargasm.fuelcostcalc;
+package com.cargasm.fuelcostcalc.dto;
 
 import javax.validation.constraints.Min;
 import lombok.AllArgsConstructor;
